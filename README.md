@@ -1,16 +1,40 @@
-# futo_alert
+# Futo Alert
 
-A new Flutter project.
+A Flutter project built with **Clean Architecture** principles, focusing on scalability and maintainability. The app currently includes the following screens:
+
+- Splash Screen
+- Sign Up Screen
+- Sign In Screen
+
+---
+
+## Features
+
+- **Splash Screen**: Displays the app logo and initializes resources.
+- **Sign Up Screen**: Allows users to create a new account.
+- **Sign In Screen**: Enables users to log in to the application.
+
+---
+
+## Project Structure
+
+This project follows the **Clean Architecture** pattern to separate concerns and improve scalability.
+
+
+
+---
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+Before running the project, ensure you have:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Flutter](https://flutter.dev/docs/get-started/install) installed.
+- An IDE such as [Android Studio](https://developer.android.com/studio) or [VS Code](https://code.visualstudio.com/).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/futo_alert.git
