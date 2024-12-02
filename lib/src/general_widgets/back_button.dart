@@ -22,8 +22,8 @@ class AppBackButton extends StatelessWidget {
             Navigator.pop(context);
           },
       child: Container(
-        height: 30.h,
-        width: 30.w,
+        height: 40.h,
+        width: 40.w,
         decoration: BoxDecoration(
             boxShadow: hasShadow
                 ? [
@@ -39,7 +39,7 @@ class AppBackButton extends StatelessWidget {
         child: Icon(
           clear ? Icons.clear : Icons.arrow_back,
           color: AppColors.grey800,
-          size: 19,
+          size: 22,
         ),
       ),
     );

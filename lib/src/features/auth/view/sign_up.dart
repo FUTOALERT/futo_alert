@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:futo_alert/src/core/utils/margin_util.dart';
-import 'package:futo_alert/src/features/auth/view/forget_password.dart';
-import 'package:futo_alert/src/features/auth/view/sign_up.dart';
-import 'package:futo_alert/src/features/aw/country/country_list_view.dart';
+import 'package:futo_alert/src/features/auth/view/login_screen.dart';
 import 'package:futo_alert/src/features/home/views/home_screen.dart';
 import 'package:futo_alert/src/general_widgets/app_button.dart';
 import 'package:futo_alert/src/general_widgets/app_form_field.dart';
 import 'package:futo_alert/src/general_widgets/app_password_field.dart';
+import 'package:futo_alert/src/general_widgets/back_button.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +19,11 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const YMargin(16),
-            Center(
-              child: Image.asset('assets/images/app_logo.png'),
-            ),
+            const YMargin(48),
+            AppBackButton(),
+            YMargin(26),
             Text(
-              'Login',
+              'Sign Up',
               style: TextStyle(
                 fontSize: 24.sp,
                 fontWeight: FontWeight.bold,
@@ -34,51 +32,39 @@ class LoginScreen extends StatelessWidget {
             ),
             const YMargin(4),
             Text(
-              'Login to continue using the application.',
+              'Create an account to get started.',
               style: TextStyle(
                 fontSize: 16.sp,
                 color: Colors.grey[700],
               ),
               textAlign: TextAlign.center,
             ),
-            const YMargin(12),
+            YMargin(16),
+            const AppFormField(
+              label: 'Full Name',
+              hintText: 'Enter your full name',
+            ),
             const AppFormField(
               label: 'Email',
               hintText: 'Enter your email here',
+              keyboardType: TextInputType.emailAddress,
             ),
             const AppPasswordField(
               label: 'Password',
               hintText: 'Enter your password here',
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ForgotPasswordScreen(),
-                    ));
-              },
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: Text(
-                  'Forgot Password?',
-                  style: TextStyle(
-                    fontSize: 14.sp,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
+            const AppPasswordField(
+              label: 'Confirm Password',
+              hintText: 'Confirm your password',
             ),
             const YMargin(24),
             AppButton(
-                text: 'Login',
+                text: 'Sign Up',
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const CountryListView(),
-                        // const HomeScreen(),
+                        builder: (context) => const HomeScreen(),
                       ));
                 }),
             const YMargin(24),
@@ -87,18 +73,17 @@ class LoginScreen extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SignUpScreen(),
+                      builder: (context) => const LoginScreen(),
                     ));
               },
               child: Text(
-                'Don\'t have an account? Sign up',
+                'Already have an account? Log in',
                 style: TextStyle(
                   fontSize: 16.sp,
                   color: Colors.black,
                 ),
               ),
             ),
-            const YMargin(32),
           ],
         ),
       ),

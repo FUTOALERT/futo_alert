@@ -36,6 +36,7 @@ dev_dependencies:
   json_serializable: ^6.5.4
   retrofit_generator: ^8.0.5
   flutter_launcher_icons: ^0.13.1
+  appwrite: ^13.0.0
   
   flutter_test:
     sdk: flutter
@@ -53,4 +54,4 @@ flutter:
   assets:
     - assets/images/
     - assets/svgs/
-    - assets/animations/
+    # - assets/animations/
