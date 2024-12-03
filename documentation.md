@@ -1,4 +1,4 @@
-# Futo Alert Mobile Application
+# Futo Alert Mobile Application Documentation 
 
 Imo skill up project built with flutter following **Clean Architecture** principles, focusing on scalability and maintainability. The app currently includes the following screens:
 
